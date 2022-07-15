@@ -1,0 +1,68 @@
+import React, { useEffect, useState } from 'react';
+// material
+import { Box, Grid, Container, Typography, Card, CardHeader, CardContent } from '@mui/material';
+// components
+import Page from '../../components/Page';
+import FormularioAlunoPage from '../../components/_alunos.sf';
+import EstoqueImagem from '../../assets/imagens/usuario2.png';
+import './style.css';
+// ----------------------------------------------------------------------
+
+export default function FormularioColaborador({ isEdit }) {
+    const [foto, setFoto] = useState(EstoqueImagem);
+    const [idColaborador, setIdColaborador] = useState(null);
+
+    useEffect(() => {
+        console.log('isEdit', isEdit);
+        const url = window.location.href.split('/');
+        const idColaborador = url.pop();
+        if (isEdit) setIdColaborador(idColaborador);
+    }, [isEdit]);
+
+    const handleSetFoto = (foto) => {
+        setFoto(URL.createObjectURL(foto));
+    };
+    return ( <
+        Page title = "SuperFitness" >
+        <
+        Container maxWidth = "xl" >
+        <
+        Grid container spacing = { 3 } >
+        <
+        Grid item xs = { 12 }
+        md = { 3 } >
+        <
+        Card sx = {
+            { position: 'static' } } > { /* <CardHeader title="Foto" /> */ } <
+        CardContent className = "s-flex" >
+        <
+        img style = {
+            { objectFit: 'fill', height: 200, width: 200 } }
+        src = { foto }
+        alt = "" / >
+        <
+        /CardContent> <
+        /Card> <
+        /Grid> <
+        Grid item xs = { 12 }
+        md = { 9 } >
+        <
+        Card sx = {
+            { position: 'static' } } >
+        <
+        CardHeader title = "Cadastro de Alunos" / >
+        <
+        CardContent >
+        <
+        FormularioAlunoPage isEdit = { isEdit }
+        idColaborador = { idColaborador }
+        onPhoto = { handleSetFoto }
+        /> <
+        /CardContent> <
+        /Card> <
+        /Grid> <
+        /Grid> <
+        /Container> <
+        /Page>
+    );
+}
