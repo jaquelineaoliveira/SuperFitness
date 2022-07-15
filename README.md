@@ -3,7 +3,7 @@ Projeto desenvolvido para o trabalho de pós graduação em Engenharia de Softwa
 
 Vídeo explicativo do protótipo: https://drive.google.com/file/d/1BjwzhkfuhKaNRQ8ik8YWyOsOnYNg21pL/view?usp=sharing 
 
-MVP 1 ---> Vídeo explicativo : 
+MVP 1 ---> Vídeo explicativo :  https://drive.google.com/file/d/19xPOqNGYvQdeiOWYdQF_QDYCMWuTC8xx/view?usp=sharing 
 
 Para executar o projeto: 
    1. Instalar o dotnet
